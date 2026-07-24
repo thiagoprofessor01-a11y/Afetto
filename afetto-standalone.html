@@ -318,21 +318,24 @@ h1, h2, h3, h4 {
   padding: 0.45rem 0.95rem; border-radius: 999px; font-size: 0.9rem; font-weight: 600;
 }
 
-/* ---------- QUEM ATENDEMOS ---------- */
-.topics {
+/* ---------- QUEM ATENDEMOS (fases da vida) ---------- */
+.stages {
   list-style: none; margin: 0; padding: 0;
-  display: grid; grid-template-columns: 1fr; gap: 1rem;
+  display: grid; grid-template-columns: 1fr; gap: 1.1rem;
 }
-.topic {
-  border-radius: var(--radius-md); padding: 1.3rem 1.4rem;
+.stage {
+  border-radius: var(--radius-lg); padding: 1.9rem 1.8rem;
   border: 1px solid var(--line); background: var(--paper-card);
-  border-left-width: 5px;
 }
-.topic-green { border-left-color: var(--green-deep); }
-.topic-rose  { border-left-color: var(--rose-deep); }
-.topic h3 { font-size: 1.2rem; }
-.topic h3 span { font-family: var(--font-body); font-weight: 500; font-size: 0.82rem; color: var(--ink-faint); text-transform: none; letter-spacing: 0; }
-.topic p { margin: 0.35rem 0 0; color: var(--ink-soft); font-size: 0.97rem; }
+.stage h3 { font-size: 1.5rem; }
+.stage h3::after {
+  content: ""; display: block; width: 36px; height: 3px; border-radius: 3px;
+  margin: 0.7rem 0 0.85rem; background: currentColor; opacity: 0.55;
+}
+.stage-green h3 { color: var(--green-deep); }
+.stage-rose  h3 { color: var(--rose-deep); }
+.stage-brown h3 { color: var(--brown-deep); }
+.stage p { margin: 0; color: var(--ink-soft); font-size: 1rem; }
 
 /* ---------- PROCESSO ---------- */
 .steps {
@@ -394,7 +397,6 @@ h1, h2, h3, h4 {
    ============================================================ */
 @media (min-width: 620px) {
   .cards { grid-template-columns: 1fr 1fr; }
-  .topics { grid-template-columns: 1fr 1fr; }
   .dif-grid { grid-template-columns: 1fr 1fr; }
   .footer-inner { grid-template-columns: 1fr auto; align-items: center; }
   .footer-legal { grid-column: 1 / -1; }
@@ -403,6 +405,7 @@ h1, h2, h3, h4 {
 @media (min-width: 900px) {
   .hero-grid { grid-template-columns: 1.05fr 0.95fr; align-items: center; padding: 4.5rem 0 5rem; }
   .prof-grid { grid-template-columns: 0.9fr 1.1fr; gap: 3.2rem; }
+  .stages { grid-template-columns: repeat(3, 1fr); }
   .contato-grid { grid-template-columns: 1fr 1fr; }
   .contato-map { min-height: 100%; }
 }
@@ -424,14 +427,11 @@ h1, h2, h3, h4 {
 }
 
 
-/* cartão de mapa estático (substitui o iframe no preview) */
 .map-card { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1rem;
   text-align: center; text-decoration: none; height: 100%; min-height: 320px; padding: 2rem;
-  background:
-    radial-gradient(60% 60% at 30% 25%, var(--green-wash) 0%, transparent 60%),
-    radial-gradient(60% 60% at 75% 80%, var(--rose-wash) 0%, transparent 60%),
-    var(--paper-card);
-  color: var(--ink); transition: transform .18s ease, box-shadow .18s ease; }
+  background: radial-gradient(60% 60% at 30% 25%, var(--green-wash) 0%, transparent 60%),
+    radial-gradient(60% 60% at 75% 80%, var(--rose-wash) 0%, transparent 60%), var(--paper-card);
+  color: var(--ink); transition: transform .18s ease; }
 .map-card:hover { transform: translateY(-3px); }
 .map-pin { color: var(--brown-deep); }
 .map-pin svg { width: 44px; height: 54px; }
@@ -633,22 +633,26 @@ h1, h2, h3, h4 {
       <div class="wrap">
         <div class="section-head">
           <p class="eyebrow">quem atendemos</p>
-          <h2 id="atende-title">cada pessoa é mais do que um diagnóstico</h2>
+          <h2 id="atende-title">cuidado em todas as fases da vida</h2>
           <p class="section-intro">
-            A avaliação e o acompanhamento ajudam a entender necessidades específicas e a encontrar
-            caminhos — na escola, no trabalho e nas relações. Alguns dos contextos com que a Afetto trabalha:
+            O desenvolvimento humano não termina na infância — ele acompanha a gente a vida toda.
+            Por isso a Afetto atende crianças, adultos e idosos, cada fase com o olhar e o tempo que ela pede.
           </p>
         </div>
 
-        <ul class="topics" role="list">
-          <li class="topic topic-green"><h3>TEA <span>· espectro autista</span></h3><p>Compreender formas próprias de perceber, comunicar e se relacionar.</p></li>
-          <li class="topic topic-green"><h3>TDAH</h3><p>Organizar atenção, tempo e impulsos para o dia a dia fluir com menos atrito.</p></li>
-          <li class="topic topic-rose"><h3>TOC</h3><p>Aliviar o peso de pensamentos e rituais que se repetem e cansam.</p></li>
-          <li class="topic topic-green"><h3>Dislexia</h3><p>Apoiar a leitura e a escrita com estratégias sob medida, sem pressa.</p></li>
-          <li class="topic topic-green"><h3>Discalculia</h3><p>Construir uma relação mais tranquila e possível com os números.</p></li>
-          <li class="topic topic-rose"><h3>Ansiedade infantil</h3><p>Dar nome ao que assusta e devolver segurança à criança.</p></li>
-          <li class="topic topic-green"><h3>Altas habilidades</h3><p>Acolher a intensidade e nutrir o potencial no ritmo de quem sente muito.</p></li>
-          <li class="topic topic-rose"><h3>Deficiência intelectual leve</h3><p>Valorizar cada avanço e sustentar a autonomia possível.</p></li>
+        <ul class="stages" role="list">
+          <li class="stage stage-green">
+            <h3>Crianças</h3>
+            <p>Avaliação e acompanhamento do desenvolvimento — atenção, aprendizagem, comportamento e emoções — em diálogo próximo com a família e a escola.</p>
+          </li>
+          <li class="stage stage-rose">
+            <h3>Adultos</h3>
+            <p>Um espaço para lidar com ansiedade, relações, trabalho e autoconhecimento, com avaliação neuropsicológica quando faz sentido.</p>
+          </li>
+          <li class="stage stage-brown">
+            <h3>Idosos</h3>
+            <p>Cuidado com memória, atenção e as mudanças de cada etapa, valorizando a autonomia, os vínculos e o bem-estar.</p>
+          </li>
         </ul>
       </div>
     </section>

@@ -313,21 +313,24 @@ h1, h2, h3, h4 {
   padding: 0.45rem 0.95rem; border-radius: 999px; font-size: 0.9rem; font-weight: 600;
 }
 
-/* ---------- QUEM ATENDEMOS ---------- */
-.topics {
+/* ---------- QUEM ATENDEMOS (fases da vida) ---------- */
+.stages {
   list-style: none; margin: 0; padding: 0;
-  display: grid; grid-template-columns: 1fr; gap: 1rem;
+  display: grid; grid-template-columns: 1fr; gap: 1.1rem;
 }
-.topic {
-  border-radius: var(--radius-md); padding: 1.3rem 1.4rem;
+.stage {
+  border-radius: var(--radius-lg); padding: 1.9rem 1.8rem;
   border: 1px solid var(--line); background: var(--paper-card);
-  border-left-width: 5px;
 }
-.topic-green { border-left-color: var(--green-deep); }
-.topic-rose  { border-left-color: var(--rose-deep); }
-.topic h3 { font-size: 1.2rem; }
-.topic h3 span { font-family: var(--font-body); font-weight: 500; font-size: 0.82rem; color: var(--ink-faint); text-transform: none; letter-spacing: 0; }
-.topic p { margin: 0.35rem 0 0; color: var(--ink-soft); font-size: 0.97rem; }
+.stage h3 { font-size: 1.5rem; }
+.stage h3::after {
+  content: ""; display: block; width: 36px; height: 3px; border-radius: 3px;
+  margin: 0.7rem 0 0.85rem; background: currentColor; opacity: 0.55;
+}
+.stage-green h3 { color: var(--green-deep); }
+.stage-rose  h3 { color: var(--rose-deep); }
+.stage-brown h3 { color: var(--brown-deep); }
+.stage p { margin: 0; color: var(--ink-soft); font-size: 1rem; }
 
 /* ---------- PROCESSO ---------- */
 .steps {
@@ -389,7 +392,6 @@ h1, h2, h3, h4 {
    ============================================================ */
 @media (min-width: 620px) {
   .cards { grid-template-columns: 1fr 1fr; }
-  .topics { grid-template-columns: 1fr 1fr; }
   .dif-grid { grid-template-columns: 1fr 1fr; }
   .footer-inner { grid-template-columns: 1fr auto; align-items: center; }
   .footer-legal { grid-column: 1 / -1; }
@@ -398,6 +400,7 @@ h1, h2, h3, h4 {
 @media (min-width: 900px) {
   .hero-grid { grid-template-columns: 1.05fr 0.95fr; align-items: center; padding: 4.5rem 0 5rem; }
   .prof-grid { grid-template-columns: 0.9fr 1.1fr; gap: 3.2rem; }
+  .stages { grid-template-columns: repeat(3, 1fr); }
   .contato-grid { grid-template-columns: 1fr 1fr; }
   .contato-map { min-height: 100%; }
 }
