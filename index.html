@@ -11,6 +11,9 @@
   <meta property="og:description" content="Avaliação neuropsicológica e psicoterapia lado a lado. Razão e emoção integradas no cuidado com o seu desenvolvimento." />
   <meta property="og:locale" content="pt_BR" />
 
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/img/favicon-180.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
@@ -24,20 +27,8 @@
   <header class="site-header" id="topo">
     <div class="wrap header-inner">
       <a class="brand" href="#topo" aria-label="Afetto Desenvolvimento Humano — início">
-        <!-- Marca: cérebro (verde/razão) + rosto (rosa/emoção) unidos pela árvore-neurônio (marrom) -->
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 48 48" width="40" height="40" role="img">
-            <!-- lado razão (verde) -->
-            <path d="M23 10c-6-4-14 0-14 8 0 6 5 9 9 12 2 1.5 4 4 5 7V13c-0-1.2-.4-2.3-1-3z" fill="#AFD5C0"/>
-            <!-- lado emoção (rosa) -->
-            <path d="M25 10c6-4 14 0 14 8 0 6-5 9-9 12-2 1.5-4 4-5 7V13c0-1.2.4-2.3 1-3z" fill="#FDC1BC"/>
-            <!-- árvore-neurônio (marrom) que integra -->
-            <path d="M24 8v30" stroke="#C29250" stroke-width="2.4" stroke-linecap="round" fill="none"/>
-            <path d="M24 20c-3-1-5-3-6-6M24 20c3-1 5-3 6-6M24 28c-3-1-5-2-7-1M24 28c3-1 5-2 7-1" stroke="#C29250" stroke-width="1.8" stroke-linecap="round" fill="none"/>
-            <circle cx="24" cy="8" r="2.4" fill="#8F6329"/>
-          </svg>
-        </span>
-        <span class="brand-word">afetto<span class="brand-sub">desenvolvimento humano</span></span>
+        <img class="brand-logo" src="assets/img/logo-lockup.png"
+             alt="Afetto Desenvolvimento Humano" width="240" height="70" />
       </a>
 
       <nav class="site-nav" aria-label="Navegação principal">
@@ -47,7 +38,7 @@
         </button>
         <ul class="nav-menu" id="nav-menu">
           <li><a href="#sobre">A clínica</a></li>
-          <li><a href="#profissional">Dra. Patrícia</a></li>
+          <li><a href="#profissional">Patrícia Miranda</a></li>
           <li><a href="#atende">Quem atendemos</a></li>
           <li><a href="#primeiro-atendimento">Como funciona</a></li>
           <li><a class="nav-cta" href="#contato">Agendar</a></li>
@@ -74,30 +65,34 @@
             em cada fase da vida.
           </p>
           <div class="hero-actions">
-            <!-- SUBSTITUIR: 5563999999999 pelo WhatsApp real da clínica -->
-            <a class="btn btn-primary" href="https://wa.me/5563999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Afetto." target="_blank" rel="noopener">
+            <a class="btn btn-primary" href="https://wa.me/5563992235938?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Afetto." target="_blank" rel="noopener">
               Agendar avaliação
             </a>
             <a class="btn btn-ghost" href="#contato">Conhecer a clínica</a>
           </div>
         </div>
 
-        <!-- Elemento de assinatura: "o fio da integração" -->
-        <div class="hero-art" aria-hidden="true">
-          <svg class="integracao" viewBox="0 0 420 420" role="presentation">
-            <!-- forma razão (verde) -->
-            <path class="blob blob-green" d="M150 90c58-24 96 12 96 66 0 52-40 78-86 84-46 6-84-26-84-78 0-40 24-58 74-72z"/>
-            <!-- forma emoção (rosa) -->
-            <path class="blob blob-rose" d="M270 100c56-8 92 30 90 84-2 52-44 84-94 84-44 0-70-30-70-78 0-46 26-82 74-90z"/>
-            <!-- o fio contínuo (árvore/neurônio marrom) que costura razão e emoção -->
-            <path class="thread" d="M60 300 C 120 250, 150 190, 200 200 S 300 250, 350 150 C 372 118, 360 78, 320 70"
-                  fill="none" stroke="#8F6329" stroke-width="3.2" stroke-linecap="round"/>
-            <path class="thread thread-branch" d="M200 200 c -14 -22 -10 -44 6 -58 M200 200 c 18 -14 40 -12 56 -2 M350 150 c -22 -6 -40 4 -50 22"
-                  fill="none" stroke="#8F6329" stroke-width="2.2" stroke-linecap="round"/>
-            <circle class="thread-node" cx="320" cy="70" r="5" fill="#8F6329"/>
-            <circle class="thread-node" cx="60" cy="300" r="5" fill="#8F6329"/>
-          </svg>
-          <p class="hero-art-caption">integrar é cuidar do todo</p>
+        <!-- Coluna visual do hero: foto da Dra. Patrícia emoldurada pelo "fio da integração" -->
+        <div class="hero-art">
+          <!-- SUBSTITUIR: assets/img/patricia-3.jpg (retrato acolhedor, poltrona) -->
+          <figure class="hero-photo">
+            <img src="assets/img/patricia-3.jpg" alt="Dra. Patrícia Miranda, fundadora da Afetto, na clínica em Palmas-TO"
+                 loading="eager" width="520" height="620"
+                 onerror="this.closest('.hero-photo').classList.add('photo-empty')" />
+            <span class="photo-fallback" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="12" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M12 54c2-12 11-18 20-18s18 6 20 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+              <em>foto da Dra. Patrícia</em>
+            </span>
+            <!-- o "fio da integração" — assinatura visual, verde (razão) → rosa (emoção) unidos pelo marrom -->
+            <svg class="hero-thread" viewBox="0 0 200 260" aria-hidden="true">
+              <path class="thread" d="M20 220 C 60 170, 40 110, 90 96 S 170 70, 168 24"
+                    fill="none" stroke="#8F6329" stroke-width="2.6" stroke-linecap="round"/>
+              <path class="thread thread-branch" d="M90 96 c -16 -14 -18 -34 -8 -50 M90 96 c 20 -6 40 4 46 22"
+                    fill="none" stroke="#8F6329" stroke-width="1.8" stroke-linecap="round"/>
+              <circle class="thread-node" cx="168" cy="24" r="4.5" fill="#8F6329"/>
+              <circle class="thread-node" cx="20" cy="220" r="4.5" fill="#8F6329"/>
+            </svg>
+          </figure>
         </div>
       </div>
     </section>
@@ -168,26 +163,26 @@
     <section class="section section-profissional" id="profissional" aria-labelledby="prof-title">
       <div class="wrap prof-grid">
         <div class="prof-portrait">
-          <!-- SUBSTITUIR: assets/img/dra-patricia.jpg pela foto real (retrato vertical ~4:5) -->
+          <!-- SUBSTITUIR: assets/img/patricia-1.jpg (retrato formal, blazer branco, ~4:5) -->
           <figure class="portrait-frame">
-            <img src="assets/img/dra-patricia.jpg" alt="Dra. Patrícia, psicóloga e neuropsicóloga, fundadora da Afetto"
-                 loading="lazy" onerror="this.closest('.portrait-frame').classList.add('portrait-empty')" />
-            <span class="portrait-fallback" aria-hidden="true">
+            <img src="assets/img/patricia-1.jpg" alt="Patrícia Miranda, psicóloga e neuropsicóloga, fundadora da Afetto"
+                 loading="lazy" width="400" height="500"
+                 onerror="this.closest('.portrait-frame').classList.add('photo-empty')" />
+            <span class="photo-fallback" aria-hidden="true">
               <svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="12" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M12 54c2-12 11-18 20-18s18 6 20 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
-              <em>foto da Dra. Patrícia</em>
+              <em>foto de Patrícia Miranda</em>
             </span>
           </figure>
         </div>
 
         <div class="prof-copy">
           <p class="eyebrow">profissional responsável</p>
-          <h2 id="prof-title">Dra. Patrícia</h2>
+          <h2 id="prof-title">Patrícia Miranda</h2>
           <p class="prof-role">Psicóloga e neuropsicóloga · fundadora da Afetto</p>
-          <!-- SUBSTITUIR: número real do registro -->
-          <p class="prof-crp">CRP 23/XXXXX</p>
+          <p class="prof-crp">CRP 23/132</p>
 
           <p>
-            É da Dra. Patrícia a ideia que dá nome à clínica: cuidar do desenvolvimento humano
+            É de Patrícia a ideia que dá nome à clínica: cuidar do desenvolvimento humano
             é olhar, ao mesmo tempo, para a mente que pensa e para o coração que sente. Foi assim
             que a Afetto reuniu, num só lugar, a precisão da avaliação neuropsicológica e a escuta
             atenta da psicoterapia.
@@ -198,12 +193,16 @@
             devolutivas honestas e linguagem que se entende fora do consultório.
           </p>
 
-          <!-- SUBSTITUIR: itens de formação pelos títulos reais -->
+          <!-- SUBSTITUIR/AJUSTAR: confirme os títulos exatos de formação -->
           <ul class="prof-facts" role="list">
-            <li>Graduação em Psicologia</li>
-            <li>Especialização em Neuropsicologia</li>
-            <li>Atendimento a crianças, adolescentes e adultos</li>
+            <li>Psicologia</li>
+            <li>Neuropsicologia</li>
+            <li>Crianças, adolescentes e adultos</li>
           </ul>
+
+          <p class="prof-social">
+            <a href="https://instagram.com/patmiranda.neuropsicologa" target="_blank" rel="noopener">@patmiranda.neuropsicologa</a>
+          </p>
         </div>
       </div>
     </section>
@@ -301,36 +300,37 @@
           </p>
 
           <div class="contato-actions">
-            <!-- SUBSTITUIR: 5563999999999 pelo WhatsApp real -->
-            <a class="btn btn-primary" href="https://wa.me/5563999999999?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Afetto%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">
+            <a class="btn btn-primary" href="https://wa.me/5563992235938?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Afetto%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">
               Falar no WhatsApp
             </a>
+            <a class="btn btn-ghost" href="https://instagram.com/patmiranda.neuropsicologa" target="_blank" rel="noopener">Ver o Instagram</a>
           </div>
 
           <dl class="contato-info">
             <div>
               <dt>Endereço</dt>
-              <!-- SUBSTITUIR: endereço completo real -->
-              <dd>Rua Exemplo, 000 · Plano Diretor Sul<br />Palmas — TO</dd>
+              <dd>Quadra 204 Sul, Alameda 01, Lote 43<br />Plano Diretor Sul · Palmas — TO<br />CEP 77.020-490</dd>
             </div>
             <div>
               <dt>Horário</dt>
-              <!-- SUBSTITUIR pelos horários reais -->
+              <!-- SUBSTITUIR/CONFIRMAR os horários reais de atendimento -->
               <dd>Segunda a sexta, 8h às 19h<br />Sábado, 8h às 12h</dd>
             </div>
             <div>
               <dt>WhatsApp</dt>
-              <!-- SUBSTITUIR pelo número real -->
-              <dd><a href="https://wa.me/5563999999999" target="_blank" rel="noopener">(63) 99999-9999</a></dd>
+              <dd><a href="https://wa.me/5563992235938" target="_blank" rel="noopener">(63) 99223-5938</a></dd>
+            </div>
+            <div>
+              <dt>E-mail</dt>
+              <dd><a href="mailto:afetto.desenvolvimento@gmail.com">afetto.desenvolvimento@gmail.com</a></dd>
             </div>
           </dl>
         </div>
 
         <div class="contato-map">
-          <!-- SUBSTITUIR o parâmetro q= pelo endereço exato; funciona sem chave de API -->
           <iframe
-            title="Localização da Afetto em Palmas — TO"
-            src="https://www.google.com/maps?q=Palmas,+Tocantins&output=embed"
+            title="Localização da Afetto — Quadra 204 Sul, Alameda 01, Palmas — TO"
+            src="https://www.google.com/maps?q=204+Sul+Alameda+1,+Palmas+-+TO,+77020-490&output=embed"
             loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
@@ -341,16 +341,20 @@
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <div class="footer-brand">
-        <span class="brand-word">afetto<span class="brand-sub">desenvolvimento humano</span></span>
+        <img class="footer-logo" src="assets/img/logo-lockup.png" alt="Afetto Desenvolvimento Humano" width="200" height="58" />
         <p>Psicologia e neuropsicologia · Palmas — TO</p>
+        <p class="footer-contact">
+          <a href="https://wa.me/5563992235938" target="_blank" rel="noopener">(63) 99223-5938</a> ·
+          <a href="https://instagram.com/patmiranda.neuropsicologa" target="_blank" rel="noopener">@patmiranda.neuropsicologa</a>
+        </p>
       </div>
       <nav class="footer-nav" aria-label="Rodapé">
         <a href="#sobre">A clínica</a>
-        <a href="#profissional">Dra. Patrícia</a>
+        <a href="#profissional">Patrícia Miranda</a>
         <a href="#atende">Quem atendemos</a>
         <a href="#contato">Contato</a>
       </nav>
-      <p class="footer-legal">© <span id="ano"></span> Afetto Desenvolvimento Humano. Todos os direitos reservados.</p>
+      <p class="footer-legal">© <span id="ano"></span> Afetto Desenvolvimento Humano · CNPJ 49.867.094/0001-90 · Palmas — TO</p>
     </div>
   </footer>
 

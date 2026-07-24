@@ -1,7 +1,8 @@
 # Afetto Desenvolvimento Humano — landing page
 
 Landing page (seção única, scroll) para a clínica de psicologia e neuropsicologia
-**Afetto Desenvolvimento Humano**, em Palmas — TO, fundada pela Dra. Patrícia.
+**Afetto Desenvolvimento Humano**, em Palmas — TO, fundada por **Patrícia Miranda**
+(psicóloga e neuropsicóloga, CRP 23/132).
 
 Site estático, sem build. É só abrir o `index.html` no navegador ou publicar a pasta
 em qualquer hospedagem de arquivos estáticos (GitHub Pages, Netlify, Vercel, Cloudflare Pages).
@@ -9,43 +10,51 @@ em qualquer hospedagem de arquivos estáticos (GitHub Pages, Netlify, Vercel, Cl
 ## Estrutura
 
 ```
-index.html              → marcação e conteúdo (copy em PT-BR)
-assets/css/styles.css   → sistema visual (tokens de cor + tipografia)
-assets/js/main.js        → menu mobile, entrada do hero, ano do rodapé
-assets/img/             → coloque aqui a foto da Dra. Patrícia
+index.html               marcação e conteúdo (copy em PT-BR)
+assets/css/styles.css    sistema visual (tokens de cor + tipografia)
+assets/js/main.js         menu mobile, entrada do hero, ano do rodapé
+assets/img/              logotipo, favicons e fotos da Dra. Patrícia
 ```
 
-## Conceito de design
+## Identidade visual (fiel ao manual de marca)
 
-- **Tese da marca como sistema:** verde `#AFD5C0` governa o conteúdo racional/cognitivo,
-  rosa `#FDC1BC` governa o acolhimento emocional, marrom `#C29250` é a estrutura que integra os dois.
-- **Elemento de assinatura — "o fio da integração":** uma linha marrom contínua (SVG) que,
-  no hero, tece entre as formas verde (razão) e rosa (emoção) e reaparece como costura entre as seções.
+- **Logotipo oficial** extraído do manual (`assets/img/logo-lockup.png`, fundo transparente)
+  usado no cabeçalho e rodapé; `logo-heart.png` é o símbolo do coração isolado.
+- **Cores da marca** aplicadas com significado, não como blocos:
+  - Verde `#AFD5C0` → conteúdo racional/cognitivo (avaliação, estimulação, TDAH, dislexia…)
+  - Rosa `#FDC1BC` → acolhimento emocional (psicoterapia, ansiedade, grupos…)
+  - Marrom `#C29250` → integração/estrutura (CTA, links, o "fio" que costura as seções)
+  - Bege de fundo → leveza e neutralidade
+- **Elemento de assinatura — "o fio da integração":** linha marrom contínua (a árvore/neurônio
+  do logo) que emoldura a foto do hero e reaparece entre as seções.
 - **Tipografia:** display `De Rotterdam Demo` (fallback web **Fredoka**) em minúsculas + corpo **Mulish**.
-  Para usar a fonte oficial, adicione os arquivos `De Rotterdam Demo` em `assets/fonts/` e um
-  `@font-face` no topo do `styles.css` — o fallback já mantém o mesmo caráter arredondado.
-- **Movimento:** uma única entrada orquestrada no hero; `prefers-reduced-motion` respeitado.
+  Para usar a fonte oficial, coloque os arquivos em `assets/fonts/` e adicione um `@font-face`
+  no topo do `styles.css` — o fallback já mantém o mesmo caráter arredondado.
 
-## O que substituir antes de publicar
+## Fotos da Dra. Patrícia — adicionar
 
-Todos os pontos abaixo estão marcados no `index.html` com comentários `<!-- SUBSTITUIR ... -->`:
+Coloque três fotos em `assets/img/` com estes nomes (enquanto não existirem, a página
+mostra um espaço reservado elegante, sem quebrar o layout):
 
-| Item | Onde | Valor atual (placeholder) |
-|------|------|---------------------------|
-| WhatsApp | hero + contato (`wa.me/...` e `(63) 99999-9999`) | `5563999999999` |
-| Foto da Dra. Patrícia | `assets/img/dra-patricia.jpg` | ausente (mostra fallback) |
-| Registro profissional | seção Dra. Patrícia | `CRP 23/XXXXX` |
-| Formação | seção Dra. Patrícia (`.prof-facts`) | títulos genéricos |
-| Endereço | seção contato | `Rua Exemplo, 000 · Plano Diretor Sul` |
-| Horário | seção contato | Seg–sex 8h–19h · Sáb 8h–12h |
-| Mapa | iframe do Google Maps | `q=Palmas, Tocantins` |
+| Arquivo | Onde aparece | Sugestão |
+|---------|--------------|----------|
+| `patricia-3.jpg` | **hero** (coluna direita) | retrato acolhedor (poltrona), vertical ~5:6 |
+| `patricia-1.jpg` | seção **profissional** | retrato formal (blazer branco), vertical ~4:5 |
 
-> A foto tem tratamento de fallback automático: se `dra-patricia.jpg` não existir,
-> aparece um espaço reservado no lugar, sem quebrar o layout. Recomenda-se um retrato
-> vertical na proporção **4:5**.
+## Dados de contato já preenchidos (do manual)
+
+- WhatsApp: **(63) 99223-5938** → `wa.me/5563992235938`
+- E-mail: **afetto.desenvolvimento@gmail.com**
+- Instagram: **@patmiranda.neuropsicologa**
+- Endereço: **Quadra 204 Sul, Alameda 01, Lote 43 · Plano Diretor Sul · Palmas — TO · CEP 77.020-490**
+- CNPJ: **49.867.094/0001-90**
+
+> Único item a confirmar: os **horários de atendimento** na seção de contato são um
+> placeholder (Seg–sex 8h–19h · Sáb 8h–12h). Marcado com `<!-- CONFIRMAR -->` no HTML.
 
 ## Acessibilidade
 
 - Skip link, `:focus-visible` visível em toda a navegação por teclado.
 - Menu mobile com `aria-expanded`, fecha no `Esc`.
 - Hierarquia semântica (`header`/`main`/`section`/`footer`, um único `h1`).
+- `prefers-reduced-motion` respeitado (a única animação orquestrada é a entrada do hero).
