@@ -361,6 +361,25 @@ h1, h2, h3, h4 {
 .dif:nth-child(even)::before { background: var(--rose-deep); }
 .dif p { margin: 0; color: var(--ink-soft); font-size: 0.98rem; }
 
+/* ---------- O ESPAÇO (galeria da clínica) ---------- */
+.section-espaco { background: var(--sand); }
+.gallery {
+  display: grid; grid-template-columns: 1fr; gap: 1.1rem;
+}
+.shot {
+  position: relative; margin: 0; aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg); overflow: hidden;
+  background: var(--green-wash); box-shadow: var(--shadow-card);
+}
+.shot:nth-child(2) { background: var(--rose-wash); }
+.shot:nth-child(3) { background: #F1E7D6; }
+.shot img { width: 100%; height: 100%; object-fit: cover; }
+.shot .photo-fallback { color: var(--brown-deep); }
+.shot:nth-child(1) .photo-fallback { color: var(--green-deep); }
+.shot:nth-child(2) .photo-fallback { color: var(--rose-deep); }
+.shot.photo-empty img { display: none; }
+.shot.photo-empty .photo-fallback { display: flex; }
+
 /* ---------- CONTATO ---------- */
 .section-contato {
   background:
@@ -406,6 +425,7 @@ h1, h2, h3, h4 {
   .hero-grid { grid-template-columns: 1.05fr 0.95fr; align-items: center; padding: 4.5rem 0 5rem; }
   .prof-grid { grid-template-columns: 0.9fr 1.1fr; gap: 3.2rem; }
   .stages { grid-template-columns: repeat(3, 1fr); }
+  .gallery { grid-template-columns: repeat(3, 1fr); }
   .contato-grid { grid-template-columns: 1fr 1fr; }
   .contato-map { min-height: 100%; }
 }
@@ -709,6 +729,48 @@ h1, h2, h3, h4 {
             <div class="dif"><h4>Da criança ao adulto</h4><p>Atendimento em todas as fases, com espaço e materiais preparados para cada idade.</p></div>
             <div class="dif"><h4>Diálogo com escola e família</h4><p>Porque o desenvolvimento também acontece fora da sala de atendimento.</p></div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ O ESPAÇO (fotos da clínica) ============ -->
+    <section class="section section-espaco" id="espaco" aria-labelledby="espaco-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">o espaço</p>
+          <h2 id="espaco-title">um ambiente pensado para acolher</h2>
+          <p class="section-intro">
+            Salas tranquilas, luz suave e cantos preparados para cada idade — porque
+            se sentir à vontade também faz parte do cuidado. Conheça um pouco da clínica em Palmas.
+          </p>
+        </div>
+
+        <div class="gallery">
+          <!-- SUBSTITUIR: assets/img/clinica-1.jpg, clinica-2.jpg, clinica-3.jpg (fotos reais da clínica) -->
+          <figure class="shot">
+            <img src="assets/img/clinica-1.jpg" alt="Recepção da clínica Afetto, em Palmas-TO" loading="lazy"
+                 onerror="this.closest('.shot').classList.add('photo-empty')" />
+            <span class="photo-fallback" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><rect x="10" y="16" width="44" height="34" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="28" r="4" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M12 46l14-12 10 8 8-6 8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <em>foto da clínica</em>
+            </span>
+          </figure>
+          <figure class="shot">
+            <img src="assets/img/clinica-2.jpg" alt="Sala de atendimento da clínica Afetto" loading="lazy"
+                 onerror="this.closest('.shot').classList.add('photo-empty')" />
+            <span class="photo-fallback" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><rect x="10" y="16" width="44" height="34" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="28" r="4" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M12 46l14-12 10 8 8-6 8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <em>foto da clínica</em>
+            </span>
+          </figure>
+          <figure class="shot">
+            <img src="assets/img/clinica-3.jpg" alt="Espaço de estimulação e grupos da clínica Afetto" loading="lazy"
+                 onerror="this.closest('.shot').classList.add('photo-empty')" />
+            <span class="photo-fallback" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><rect x="10" y="16" width="44" height="34" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="28" r="4" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M12 46l14-12 10 8 8-6 8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <em>foto da clínica</em>
+            </span>
+          </figure>
         </div>
       </div>
     </section>

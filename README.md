@@ -31,15 +31,22 @@ assets/img/              logotipo, favicons e fotos da Dra. Patrícia
   Para usar a fonte oficial, coloque os arquivos em `assets/fonts/` e adicione um `@font-face`
   no topo do `styles.css` — o fallback já mantém o mesmo caráter arredondado.
 
-## Fotos da Dra. Patrícia — adicionar
+## Fotos — como adicionar
 
-Coloque três fotos em `assets/img/` com estes nomes (enquanto não existirem, a página
-mostra um espaço reservado elegante, sem quebrar o layout):
+Há duas formas:
+
+1. **Pelo chat (mais fácil):** reenvie as imagens como anexos de arquivo que eu embuto
+   na página e republico — sem mexer em código.
+2. **Manualmente:** coloque os arquivos em `assets/img/` com os nomes exatos abaixo.
+   Enquanto não existirem, a página mostra um espaço reservado elegante, sem quebrar o layout.
 
 | Arquivo | Onde aparece | Sugestão |
 |---------|--------------|----------|
 | `patricia-3.jpg` | **hero** (coluna direita) | retrato acolhedor (poltrona), vertical ~5:6 |
 | `patricia-1.jpg` | seção **profissional** | retrato formal (blazer branco), vertical ~4:5 |
+| `clinica-1.jpg` | seção **o espaço** | recepção / entrada, horizontal ~4:3 |
+| `clinica-2.jpg` | seção **o espaço** | sala de atendimento, horizontal ~4:3 |
+| `clinica-3.jpg` | seção **o espaço** | espaço de estimulação / grupos, horizontal ~4:3 |
 
 ## Dados de contato já preenchidos (do manual)
 
