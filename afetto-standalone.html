@@ -337,23 +337,7 @@ h1, h2, h3, h4 {
 .stage-brown h3 { color: var(--brown-deep); }
 .stage p { margin: 0; color: var(--ink-soft); font-size: 1rem; }
 
-/* ---------- PROCESSO ---------- */
-.steps {
-  list-style: none; margin: 0 0 3.5rem; padding: 0;
-  display: grid; grid-template-columns: 1fr; gap: 0;
-}
-.step { display: flex; gap: 1.1rem; padding: 1.2rem 0; border-top: 1px solid var(--line); }
-.step:first-child { border-top: none; }
-.step-num {
-  flex: none; width: 46px; height: 46px; border-radius: 50%;
-  display: inline-flex; align-items: center; justify-content: center;
-  background: var(--brown); color: #fff; font-family: var(--font-display);
-  font-weight: 600; font-size: 1.2rem;
-}
-.step-body h3 { font-size: 1.22rem; margin-bottom: 0.25rem; }
-.step-body p { margin: 0; color: var(--ink-soft); }
-
-.diferenciais-title { font-size: clamp(1.4rem, 3vw, 1.8rem); margin-bottom: 1.4rem; }
+/* ---------- DIFERENCIAIS ---------- */
 .dif-grid { display: grid; grid-template-columns: 1fr; gap: 1.4rem 2rem; }
 .dif h4 { font-family: var(--font-display); font-weight: 500; text-transform: lowercase; font-size: 1.15rem; margin: 0 0 0.35rem; }
 .dif { position: relative; padding-left: 1.2rem; }
@@ -481,7 +465,7 @@ h1, h2, h3, h4 {
           <li><a href="#sobre">A clínica</a></li>
           <li><a href="#profissional">Patrícia Miranda</a></li>
           <li><a href="#atende">Quem atendemos</a></li>
-          <li><a href="#primeiro-atendimento">Como funciona</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
           <li><a class="nav-cta" href="#contato">Agendar</a></li>
         </ul>
       </nav>
@@ -677,58 +661,18 @@ h1, h2, h3, h4 {
       </div>
     </section>
 
-    <!-- ============ COMO FUNCIONA (processo real, numerado) ============ -->
-    <section class="section section-processo" id="primeiro-atendimento" aria-labelledby="proc-title">
+    <!-- ============ DIFERENCIAIS ============ -->
+    <section class="section section-diferenciais" id="diferenciais" aria-labelledby="dif-title">
       <div class="wrap">
         <div class="section-head">
-          <p class="eyebrow">como funciona</p>
-          <h2 id="proc-title">o primeiro atendimento, passo a passo</h2>
-          <p class="section-intro">
-            Chegar a uma clínica pela primeira vez traz dúvidas. Por isso, o começo na Afetto
-            segue um caminho simples e combinado.
-          </p>
+          <p class="eyebrow">por que a afetto</p>
+          <h2 id="dif-title">o que torna a afetto diferente</h2>
         </div>
-
-        <ol class="steps" role="list">
-          <li class="step">
-            <span class="step-num" aria-hidden="true">1</span>
-            <div class="step-body">
-              <h3>Primeiro contato</h3>
-              <p>Você fala com a gente pelo WhatsApp e conta, sem compromisso, o que está buscando.</p>
-            </div>
-          </li>
-          <li class="step">
-            <span class="step-num" aria-hidden="true">2</span>
-            <div class="step-body">
-              <h3>Entrevista inicial</h3>
-              <p>Um encontro para entender a história e as questões atuais e definir, juntos, o melhor caminho — avaliação, terapia ou orientação.</p>
-            </div>
-          </li>
-          <li class="step">
-            <span class="step-num" aria-hidden="true">3</span>
-            <div class="step-body">
-              <h3>Plano de cuidado</h3>
-              <p>A partir do que foi conversado, montamos um plano com objetivos claros e etapas combinadas.</p>
-            </div>
-          </li>
-          <li class="step">
-            <span class="step-num" aria-hidden="true">4</span>
-            <div class="step-body">
-              <h3>Acompanhamento e devolutiva</h3>
-              <p>Ao longo do processo você recebe retornos concretos — inclusive para escola e família, quando faz sentido.</p>
-            </div>
-          </li>
-        </ol>
-
-        <!-- Diferenciais (sem numeração decorativa) -->
-        <div class="diferenciais">
-          <h3 class="diferenciais-title">o que torna a afetto diferente</h3>
-          <div class="dif-grid">
-            <div class="dif"><h4>Razão e emoção no mesmo lugar</h4><p>Avaliação neuropsicológica e psicoterapia na mesma clínica, com informação que conversa entre si.</p></div>
-            <div class="dif"><h4>Devolutivas que se entende</h4><p>Relatórios e orientações em linguagem clara, úteis para a vida real — não só para o arquivo.</p></div>
-            <div class="dif"><h4>Da criança ao adulto</h4><p>Atendimento em todas as fases, com espaço e materiais preparados para cada idade.</p></div>
-            <div class="dif"><h4>Diálogo com escola e família</h4><p>Porque o desenvolvimento também acontece fora da sala de atendimento.</p></div>
-          </div>
+        <div class="dif-grid">
+          <div class="dif"><h4>Razão e emoção no mesmo lugar</h4><p>Avaliação neuropsicológica e psicoterapia na mesma clínica, com informação que conversa entre si.</p></div>
+          <div class="dif"><h4>Devolutivas que se entende</h4><p>Relatórios e orientações em linguagem clara, úteis para a vida real — não só para o arquivo.</p></div>
+          <div class="dif"><h4>Da criança ao idoso</h4><p>Atendimento em todas as fases da vida, com espaço e materiais preparados para cada idade.</p></div>
+          <div class="dif"><h4>Diálogo com escola e família</h4><p>Porque o desenvolvimento também acontece fora da sala de atendimento.</p></div>
         </div>
       </div>
     </section>

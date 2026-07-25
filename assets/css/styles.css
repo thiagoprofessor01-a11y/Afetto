@@ -332,23 +332,7 @@ h1, h2, h3, h4 {
 .stage-brown h3 { color: var(--brown-deep); }
 .stage p { margin: 0; color: var(--ink-soft); font-size: 1rem; }
 
-/* ---------- PROCESSO ---------- */
-.steps {
-  list-style: none; margin: 0 0 3.5rem; padding: 0;
-  display: grid; grid-template-columns: 1fr; gap: 0;
-}
-.step { display: flex; gap: 1.1rem; padding: 1.2rem 0; border-top: 1px solid var(--line); }
-.step:first-child { border-top: none; }
-.step-num {
-  flex: none; width: 46px; height: 46px; border-radius: 50%;
-  display: inline-flex; align-items: center; justify-content: center;
-  background: var(--brown); color: #fff; font-family: var(--font-display);
-  font-weight: 600; font-size: 1.2rem;
-}
-.step-body h3 { font-size: 1.22rem; margin-bottom: 0.25rem; }
-.step-body p { margin: 0; color: var(--ink-soft); }
-
-.diferenciais-title { font-size: clamp(1.4rem, 3vw, 1.8rem); margin-bottom: 1.4rem; }
+/* ---------- DIFERENCIAIS ---------- */
 .dif-grid { display: grid; grid-template-columns: 1fr; gap: 1.4rem 2rem; }
 .dif h4 { font-family: var(--font-display); font-weight: 500; text-transform: lowercase; font-size: 1.15rem; margin: 0 0 0.35rem; }
 .dif { position: relative; padding-left: 1.2rem; }
