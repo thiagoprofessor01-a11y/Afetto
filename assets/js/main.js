@@ -30,4 +30,11 @@
   // Ano corrente no rodapé
   var ano = document.getElementById("ano");
   if (ano) ano.textContent = new Date().getFullYear();
+
+  // Mês atual nas chamadas de urgência (atualiza sozinho)
+  var meses = ["janeiro","fevereiro","março","abril","maio","junho",
+               "julho","agosto","setembro","outubro","novembro","dezembro"];
+  var mes = meses[new Date().getMonth()];
+  var alvos = document.querySelectorAll(".mes-atual");
+  for (var i = 0; i < alvos.length; i++) alvos[i].textContent = mes;
 })();
