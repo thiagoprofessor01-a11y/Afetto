@@ -31,6 +31,17 @@
   var ano = document.getElementById("ano");
   if (ano) ano.textContent = new Date().getFullYear();
 
+  // Botão flutuante de WhatsApp: aparece só depois de rolar além do hero
+  var waFloat = document.querySelector(".wa-float");
+  if (waFloat) {
+    var toggleFloat = function () {
+      var passouHero = window.pageYOffset > window.innerHeight * 0.7;
+      waFloat.classList.toggle("is-visible", passouHero);
+    };
+    window.addEventListener("scroll", toggleFloat, { passive: true });
+    toggleFloat();
+  }
+
   // Mês atual nas chamadas de urgência (atualiza sozinho)
   var meses = ["janeiro","fevereiro","março","abril","maio","junho",
                "julho","agosto","setembro","outubro","novembro","dezembro"];
