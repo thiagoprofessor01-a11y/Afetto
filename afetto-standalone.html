@@ -73,7 +73,6 @@ h1, h2, h3, h4 {
   font-weight: 500;
   line-height: 1.15;
   letter-spacing: -0.01em;
-  text-transform: lowercase;   /* acolhimento — minúsculas */
   color: var(--ink);
   margin: 0;
 }
@@ -105,8 +104,7 @@ h1, h2, h3, h4 {
    ============================================================ */
 .btn {
   display: inline-flex; align-items: center; justify-content: center;
-  font-family: var(--font-display); font-weight: 500;
-  text-transform: lowercase; letter-spacing: 0;
+  font-family: var(--font-display); font-weight: 500; letter-spacing: 0;
   padding: 0.85rem 1.6rem; border-radius: 999px;
   text-decoration: none; cursor: pointer; border: 2px solid transparent;
   font-size: 1.05rem; line-height: 1;
@@ -225,7 +223,7 @@ h1, h2, h3, h4 {
   align-items: center; justify-content: center; gap: 0.6rem;
 }
 .photo-fallback svg { width: 72px; height: 72px; }
-.photo-fallback em { font-style: normal; font-family: var(--font-display); text-transform: lowercase; color: var(--ink-faint); }
+.photo-fallback em { font-style: normal; font-family: var(--font-display); color: var(--ink-faint); }
 
 /* entrada orquestrada (única animação da página) */
 .thread, .thread-branch { stroke-dasharray: 700; stroke-dashoffset: 700; }
@@ -305,7 +303,7 @@ h1, h2, h3, h4 {
 .portrait-frame.photo-empty img { display: none; }
 .portrait-frame.photo-empty .photo-fallback { display: flex; }
 
-.prof-role { font-family: var(--font-display); text-transform: lowercase; color: var(--brown-deep); font-size: 1.15rem; margin: 0.3rem 0 0.2rem; }
+.prof-role { font-family: var(--font-display); color: var(--brown-deep); font-size: 1.15rem; margin: 0.3rem 0 0.2rem; }
 .prof-crp { font-size: 0.85rem; letter-spacing: 0.08em; color: var(--ink-faint); margin: 0 0 1.3rem; text-transform: uppercase; }
 .prof-social { margin: 1.3rem 0 0; }
 .prof-social a { font-weight: 700; font-size: 0.95rem; }
@@ -339,7 +337,7 @@ h1, h2, h3, h4 {
 
 /* ---------- DIFERENCIAIS ---------- */
 .dif-grid { display: grid; grid-template-columns: 1fr; gap: 1.4rem 2rem; }
-.dif h4 { font-family: var(--font-display); font-weight: 500; text-transform: lowercase; font-size: 1.15rem; margin: 0 0 0.35rem; }
+.dif h4 { font-family: var(--font-display); font-weight: 500; font-size: 1.15rem; margin: 0 0 0.35rem; }
 .dif { position: relative; padding-left: 1.2rem; }
 .dif::before { content: ""; position: absolute; left: 0; top: 0.35rem; width: 8px; height: 8px; border-radius: 50%; background: var(--green-deep); }
 .dif:nth-child(even)::before { background: var(--rose-deep); }
@@ -374,7 +372,7 @@ h1, h2, h3, h4 {
 .contato-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: stretch; }
 .contato-actions { margin: 1.6rem 0 2rem; }
 .contato-info { display: grid; gap: 1.1rem; margin: 0; }
-.contato-info dt { font-family: var(--font-display); text-transform: lowercase; color: var(--brown-deep); font-size: 1.05rem; }
+.contato-info dt { font-family: var(--font-display); color: var(--brown-deep); font-size: 1.05rem; }
 .contato-info dd { margin: 0.15rem 0 0; color: var(--ink); }
 .contato-info a { font-weight: 600; }
 .contato-map {
@@ -568,8 +566,8 @@ h1, h2, h3, h4 {
 .map-card:hover { transform: translateY(-3px); }
 .map-pin { color: var(--brown-deep); } .map-pin svg { width: 44px; height: 54px; }
 .map-text { display: flex; flex-direction: column; gap: .25rem; }
-.map-text strong { font-family: var(--font-display); font-weight: 500; text-transform: lowercase; font-size: 1.15rem; color: var(--ink); }
-.map-open { margin-top: .5rem; font-family: var(--font-display); text-transform: lowercase; color: var(--brown-deep); font-weight: 500; }
+.map-text strong { font-family: var(--font-display); font-weight: 500; font-size: 1.15rem; color: var(--ink); }
+.map-open { margin-top: .5rem; font-family: var(--font-display); color: var(--brown-deep); font-weight: 500; }
 @media (prefers-reduced-motion: reduce) { .map-card:hover { transform: none; } }
 
 </style>
@@ -580,8 +578,8 @@ h1, h2, h3, h4 {
   <div class="topbar">
     <span class="topbar-dot" aria-hidden="true"></span>
     Atendimento presencial em Palmas — TO ·
-    <strong>vagas limitadas para novas avaliações em <span class="mes-atual">este mês</span></strong>
-    <a href="https://wa.me/5563992235938?text=Ol%C3%A1%21%20Quero%20garantir%20uma%20vaga%20na%20agenda%20da%20Afetto." target="_blank" rel="noopener">garantir vaga →</a>
+    <strong>Vagas limitadas para novas avaliações em <span class="mes-atual">este mês</span></strong>
+    <a href="https://wa.me/5563992235938?text=Ol%C3%A1%21%20Quero%20garantir%20uma%20vaga%20na%20agenda%20da%20Afetto." target="_blank" rel="noopener">Garantir vaga →</a>
   </div>
 
   <!-- ============ CABEÇALHO / NAV ============ -->
@@ -617,8 +615,8 @@ h1, h2, h3, h4 {
         <div class="hero-copy">
           <p class="kicker">psicologia &amp; neuropsicologia · palmas — to · crp 23/132</p>
           <h1 id="hero-title" class="hero-title">
-            dificuldade na escola, ansiedade, esquecimentos?
-            <span class="hero-title-accent">entenda o que está acontecendo — hoje.</span>
+            Dificuldade na escola, ansiedade, esquecimentos?
+            <span class="hero-title-accent">Entenda o que está acontecendo — hoje.</span>
           </h1>
           <p class="hero-lead">
             Avaliação neuropsicológica e psicoterapia para <strong>crianças, adultos e idosos</strong>.
@@ -649,7 +647,7 @@ h1, h2, h3, h4 {
                  onerror="this.closest('.hero-photo').classList.add('photo-empty')" />
             <span class="photo-fallback" aria-hidden="true">
               <svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="12" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M12 54c2-12 11-18 20-18s18 6 20 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
-              <em>foto da Dra. Patrícia</em>
+              <em>Foto da Dra. Patrícia</em>
             </span>
             <svg class="hero-thread" viewBox="0 0 200 260" aria-hidden="true">
               <path class="thread" d="M20 220 C 60 170, 40 110, 90 96 S 170 70, 168 24"
@@ -669,7 +667,7 @@ h1, h2, h3, h4 {
       <div class="wrap">
         <div class="section-head">
           <p class="eyebrow">talvez você tenha chegado até aqui porque…</p>
-          <h2 id="sinais-title">alguns sinais não dá mais para ignorar</h2>
+          <h2 id="sinais-title">Alguns sinais não dá mais para ignorar</h2>
         </div>
 
         <ul class="signs" role="list">
@@ -691,7 +689,7 @@ h1, h2, h3, h4 {
       <div class="wrap">
         <div class="section-head">
           <p class="eyebrow">como a afetto ajuda</p>
-          <h2 id="ajuda-title">respostas claras e um caminho a seguir</h2>
+          <h2 id="ajuda-title">Respostas claras e um caminho a seguir</h2>
           <p class="section-intro">
             Aqui, a avaliação neuropsicológica e a psicoterapia trabalham juntas — para entender
             como você pensa e acolher o que você sente, com um plano que faz sentido na vida real.
@@ -743,7 +741,7 @@ h1, h2, h3, h4 {
                  onerror="this.closest('.portrait-frame').classList.add('photo-empty')" />
             <span class="photo-fallback" aria-hidden="true">
               <svg viewBox="0 0 64 64"><circle cx="32" cy="24" r="12" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M12 54c2-12 11-18 20-18s18 6 20 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
-              <em>foto de Patrícia Miranda</em>
+              <em>Foto de Patrícia Miranda</em>
             </span>
           </figure>
         </div>
@@ -781,7 +779,7 @@ h1, h2, h3, h4 {
       <div class="wrap">
         <div class="section-head">
           <p class="eyebrow">quem atendemos</p>
-          <h2 id="atende-title">cuidado em todas as fases da vida</h2>
+          <h2 id="atende-title">Cuidado em todas as fases da vida</h2>
           <p class="section-intro">
             O desenvolvimento humano acompanha a gente a vida toda. Por isso a Afetto atende
             crianças, adultos e idosos — cada fase com o olhar e o tempo que ela pede.
@@ -810,7 +808,7 @@ h1, h2, h3, h4 {
       <div class="wrap">
         <div class="section-head">
           <p class="eyebrow">por que escolher a afetto</p>
-          <h2 id="dif-title">o que torna a afetto diferente</h2>
+          <h2 id="dif-title">O que torna a Afetto diferente</h2>
         </div>
         <div class="dif-grid">
           <div class="dif"><h4>Razão e emoção no mesmo lugar</h4><p>Avaliação neuropsicológica e psicoterapia na mesma clínica, com informação que conversa entre si.</p></div>
@@ -826,7 +824,7 @@ h1, h2, h3, h4 {
       <div class="wrap">
         <div class="section-head">
           <p class="eyebrow">o espaço</p>
-          <h2 id="espaco-title">um ambiente pensado para acolher</h2>
+          <h2 id="espaco-title">Um ambiente pensado para acolher</h2>
           <p class="section-intro">
             Salas tranquilas, luz suave e cantos preparados para cada idade — porque se sentir à
             vontade também faz parte do cuidado. Conheça um pouco da clínica em Palmas.
@@ -840,7 +838,7 @@ h1, h2, h3, h4 {
                  onerror="this.closest('.shot').classList.add('photo-empty')" />
             <span class="photo-fallback" aria-hidden="true">
               <svg viewBox="0 0 64 64"><rect x="10" y="16" width="44" height="34" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="28" r="4" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M12 46l14-12 10 8 8-6 8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <em>foto da clínica</em>
+              <em>Foto da clínica</em>
             </span>
           </figure>
           <figure class="shot">
@@ -848,7 +846,7 @@ h1, h2, h3, h4 {
                  onerror="this.closest('.shot').classList.add('photo-empty')" />
             <span class="photo-fallback" aria-hidden="true">
               <svg viewBox="0 0 64 64"><rect x="10" y="16" width="44" height="34" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="28" r="4" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M12 46l14-12 10 8 8-6 8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <em>foto da clínica</em>
+              <em>Foto da clínica</em>
             </span>
           </figure>
           <figure class="shot">
@@ -856,7 +854,7 @@ h1, h2, h3, h4 {
                  onerror="this.closest('.shot').classList.add('photo-empty')" />
             <span class="photo-fallback" aria-hidden="true">
               <svg viewBox="0 0 64 64"><rect x="10" y="16" width="44" height="34" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="28" r="4" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M12 46l14-12 10 8 8-6 8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <em>foto da clínica</em>
+              <em>Foto da clínica</em>
             </span>
           </figure>
         </div>
@@ -867,7 +865,7 @@ h1, h2, h3, h4 {
     <section class="section section-urgencia" aria-labelledby="urg-title">
       <div class="wrap urgencia-inner">
         <span class="urgencia-tag">agenda de <span class="mes-atual">este mês</span></span>
-        <h2 id="urg-title">as vagas para novas avaliações são limitadas</h2>
+        <h2 id="urg-title">As vagas para novas avaliações são limitadas</h2>
         <p>
           O atendimento é individual e feito com tempo — por isso, a cada mês há um número limitado
           de novas avaliações. Se você está esperando o momento certo para começar, ele é agora:
@@ -887,7 +885,7 @@ h1, h2, h3, h4 {
       <div class="wrap contato-grid">
         <div class="contato-copy">
           <p class="eyebrow">dê o primeiro passo</p>
-          <h2 id="contato-title">o cuidado começa com uma mensagem</h2>
+          <h2 id="contato-title">O cuidado começa com uma mensagem</h2>
           <p class="section-intro">
             Você não precisa ter todas as respostas para começar — só precisa dar o primeiro passo.
             Mande uma mensagem agora: a gente responde, tira suas dúvidas e agenda o seu horário.
@@ -930,7 +928,7 @@ h1, h2, h3, h4 {
             <span class="map-text">
               <strong>Quadra 204 Sul, Alameda 01, Lote 43</strong>
               Plano Diretor Sul · Palmas — TO
-              <span class="map-open">abrir no Google Maps →</span>
+              <span class="map-open">Abrir no Google Maps →</span>
             </span>
           </a>
         </div>
