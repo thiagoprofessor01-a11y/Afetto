@@ -63,10 +63,12 @@
     }
   }
 
-  // Meta Pixel: registra "Contact" a cada clique em botão de WhatsApp
+  // Meta Pixel: registra "Contact" a cada clique em botão de WhatsApp.
+  // Links que já têm onclick próprio (ex.: o CTA do hero) disparam por conta
+  // deles — pula esses aqui para não contar o mesmo clique duas vezes.
   document.addEventListener("click", function (e) {
     var link = e.target.closest('a[href*="wa.me"]');
-    if (link && typeof fbq === "function") {
+    if (link && !link.hasAttribute("onclick") && typeof fbq === "function") {
       fbq("track", "Contact");
     }
   });
