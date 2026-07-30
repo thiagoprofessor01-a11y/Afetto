@@ -31,22 +31,29 @@ assets/img/              logotipo, favicons e fotos da Dra. Patrícia
   Para usar a fonte oficial, coloque os arquivos em `assets/fonts/` e adicione um `@font-face`
   no topo do `styles.css` — o fallback já mantém o mesmo caráter arredondado.
 
-## Fotos — como adicionar
+## Fotos e vídeo — como adicionar
 
 Há duas formas:
 
-1. **Pelo chat (mais fácil):** reenvie as imagens como anexos de arquivo que eu embuto
-   na página e republico — sem mexer em código.
-2. **Manualmente:** coloque os arquivos em `assets/img/` com os nomes exatos abaixo.
-   Enquanto não existirem, a página mostra um espaço reservado elegante, sem quebrar o layout.
+1. **Pelo chat (mais fácil):** reenvie os arquivos como **anexo de arquivo** (não colar a
+   imagem/vídeo direto na mensagem) que eu embuto na página e republico — sem mexer em código.
+2. **Manualmente:** coloque os arquivos em `assets/img/` (ou `assets/video/`) com os nomes
+   exatos abaixo. Enquanto não existirem, a página mostra um espaço reservado elegante,
+   sem quebrar o layout.
 
 | Arquivo | Onde aparece | Sugestão |
 |---------|--------------|----------|
-| `patricia-3.jpg` | **hero** (coluna direita) | retrato acolhedor (poltrona), vertical ~5:6 |
-| `patricia-1.jpg` | seção **profissional** | retrato formal (blazer branco), vertical ~4:5 |
-| `clinica-1.jpg` | seção **o espaço** | recepção / entrada, horizontal ~4:3 |
-| `clinica-2.jpg` | seção **o espaço** | sala de atendimento, horizontal ~4:3 |
-| `clinica-3.jpg` | seção **o espaço** | espaço de estimulação / grupos, horizontal ~4:3 |
+| `patricia-3.jpg` | **hero** (coluna direita) | ✅ adicionada — retrato acolhedor (poltrona) |
+| `patricia-1.jpg` | seção **profissional** | ✅ adicionada — retrato formal (blazer branco) |
+| `video/clinica.mp4` | seção **o espaço** | vídeo curto do ambiente, em loop mudo, horizontal |
+
+A seção "O espaço" toca `assets/video/clinica.mp4` automaticamente em loop, sem som e sem
+controles (atributos `autoplay muted loop playsinline`). Recomendações para o arquivo:
+- Poucos segundos (5–15s), em loop suave (início e fim parecidos combinam melhor).
+- Peso leve — idealmente abaixo de ~8–10MB para carregar rápido (comprima com HandBrake,
+  CapCut ou similar se o arquivo original for grande).
+- Se o visitante tiver a preferência "reduzir movimento" ativada no aparelho, o vídeo pausa
+  automaticamente e ganha controles manuais (o JS já cuida disso).
 
 ## Dados de contato já preenchidos (do manual)
 

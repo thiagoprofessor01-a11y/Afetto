@@ -42,10 +42,24 @@
     toggleFloat();
   }
 
-  // Mês atual nas chamadas de urgência (atualiza sozinho)
-  var meses = ["janeiro","fevereiro","março","abril","maio","junho",
-               "julho","agosto","setembro","outubro","novembro","dezembro"];
-  var mes = meses[new Date().getMonth()];
-  var alvos = document.querySelectorAll(".mes-atual");
-  for (var i = 0; i < alvos.length; i++) alvos[i].textContent = mes;
+  // Vídeo do espaço
+  var clinicVideoWrap = document.querySelector(".clinic-video");
+  var clinicVideo = clinicVideoWrap && clinicVideoWrap.querySelector("video");
+  var clinicSource = clinicVideoWrap && clinicVideoWrap.querySelector("source");
+  if (clinicVideoWrap && clinicVideo) {
+    // O erro de um <source> que falha (404, formato ausente) dispara no
+    // próprio <source>, não borbulha para o <video> — por isso escuta aqui.
+    if (clinicSource) {
+      clinicSource.addEventListener("error", function () {
+        clinicVideoWrap.classList.add("video-empty");
+      });
+    }
+    // Pausa e mostra controles para quem prefere menos movimento
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      clinicVideo.removeAttribute("autoplay");
+      clinicVideo.removeAttribute("loop");
+      clinicVideo.setAttribute("controls", "");
+      clinicVideo.pause();
+    }
+  }
 })();

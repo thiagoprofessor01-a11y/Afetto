@@ -338,24 +338,17 @@ h1, h2, h3, h4 {
 .dif:nth-child(even)::before { background: var(--rose-deep); }
 .dif p { margin: 0; color: var(--ink-soft); font-size: 0.98rem; }
 
-/* ---------- O ESPAÇO (galeria da clínica) ---------- */
+/* ---------- O ESPAÇO (vídeo da clínica) ---------- */
 .section-espaco { background: var(--sand); }
-.gallery {
-  display: grid; grid-template-columns: 1fr; gap: 1.1rem;
-}
-.shot {
-  position: relative; margin: 0; aspect-ratio: 4 / 3;
+.clinic-video {
+  position: relative; margin: 0; aspect-ratio: 16 / 9;
   border-radius: var(--radius-lg); overflow: hidden;
   background: var(--green-wash); box-shadow: var(--shadow-card);
 }
-.shot:nth-child(2) { background: var(--rose-wash); }
-.shot:nth-child(3) { background: #F1E7D6; }
-.shot img { width: 100%; height: 100%; object-fit: cover; }
-.shot .photo-fallback { color: var(--brown-deep); }
-.shot:nth-child(1) .photo-fallback { color: var(--green-deep); }
-.shot:nth-child(2) .photo-fallback { color: var(--rose-deep); }
-.shot.photo-empty img { display: none; }
-.shot.photo-empty .photo-fallback { display: flex; }
+.clinic-video video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.clinic-video .photo-fallback { color: var(--brown-deep); }
+.clinic-video.video-empty video { display: none; }
+.clinic-video.video-empty .photo-fallback { display: flex; }
 
 /* ---------- CONTATO ---------- */
 .section-contato {
@@ -402,7 +395,6 @@ h1, h2, h3, h4 {
   .hero-grid { grid-template-columns: 1.05fr 0.95fr; align-items: center; padding: 4.5rem 0 5rem; }
   .prof-grid { grid-template-columns: 0.9fr 1.1fr; gap: 3.2rem; }
   .stages { grid-template-columns: repeat(3, 1fr); }
-  .gallery { grid-template-columns: repeat(3, 1fr); }
   .contato-grid { grid-template-columns: 1fr 1fr; }
   .contato-map { min-height: 100%; }
 }
