@@ -45,21 +45,20 @@ Há duas formas:
 |---------|--------------|----------|
 | `patricia-3.jpg` | **hero** (coluna direita) | ✅ adicionada — retrato acolhedor (poltrona) |
 | `patricia-1.jpg` | seção **profissional** | ✅ adicionada — retrato formal (blazer branco) |
-| `video/clinica.mp4` | seção **o espaço** | vídeo curto do ambiente, em loop mudo, horizontal |
+| `video/clinica.mp4` | seção **o espaço** | ✅ adicionado — vídeo da recepção, horizontal, 15s |
 
 A seção "O espaço" toca `assets/video/clinica.mp4` automaticamente em loop, sem som e sem
-controles (atributos `autoplay muted loop playsinline`). Recomendações para o arquivo:
-- Poucos segundos (5–15s), em loop suave (início e fim parecidos combinam melhor).
-- Peso leve — idealmente abaixo de ~8–10MB para carregar rápido (comprima com HandBrake,
-  CapCut ou similar se o arquivo original for grande).
-- Se o visitante tiver a preferência "reduzir movimento" ativada no aparelho, o vídeo pausa
-  automaticamente e ganha controles manuais (o JS já cuida disso).
+controles (atributos `autoplay muted loop playsinline`). O vídeo enviado veio em HDR (padrão
+do iPhone) e foi convertido para SDR (`zscale`+`tonemap` via ffmpeg) para não ficar "lavado"
+em navegadores sem suporte a HDR, além de ter o áudio removido (desnecessário no loop mudo).
+Se o visitante tiver a preferência "reduzir movimento" ativada no aparelho, o vídeo pausa
+automaticamente e ganha controles manuais (o JS já cuida disso).
 
 ## Dados de contato já preenchidos (do manual)
 
 - WhatsApp: **(63) 99223-5938** → `wa.me/5563992235938`
 - E-mail: **afetto.desenvolvimento@gmail.com**
-- Instagram: **@patmiranda.neuropsicologa**
+- Instagram: **@afetto.clinica**
 - Endereço: **Quadra 204 Sul, Alameda 01, Lote 43 · Plano Diretor Sul · Palmas — TO · CEP 77.020-490**
 - CNPJ: **49.867.094/0001-90**
 
