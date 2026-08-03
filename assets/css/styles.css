@@ -338,17 +338,29 @@ h1, h2, h3, h4 {
 .dif:nth-child(even)::before { background: var(--rose-deep); }
 .dif p { margin: 0; color: var(--ink-soft); font-size: 0.98rem; }
 
-/* ---------- O ESPAÇO (vídeo da clínica) ---------- */
+/* ---------- O ESPAÇO (vídeo vertical + texto) ---------- */
 .section-espaco { background: var(--sand); }
+.espaco-grid { display: grid; grid-template-columns: 1fr; gap: 2.4rem; align-items: center; }
+.espaco-video { display: flex; justify-content: center; }
 .clinic-video {
-  position: relative; margin: 0; aspect-ratio: 16 / 9;
-  border-radius: var(--radius-lg); overflow: hidden;
-  background: var(--green-wash); box-shadow: var(--shadow-card);
+  position: relative; margin: 0; width: min(100%, 320px);
+  aspect-ratio: 9 / 16; border-radius: var(--radius-lg); overflow: hidden;
+  background: var(--green-wash); box-shadow: var(--shadow-soft);
 }
 .clinic-video video { width: 100%; height: 100%; object-fit: cover; display: block; }
 .clinic-video .photo-fallback { color: var(--brown-deep); }
 .clinic-video.video-empty video { display: none; }
 .clinic-video.video-empty .photo-fallback { display: flex; }
+
+.espaco-copy p { color: var(--ink-soft); margin: 0 0 1rem; }
+.espaco-facts {
+  list-style: none; padding: 0; margin: 1.3rem 0 0;
+  display: flex; flex-wrap: wrap; gap: 0.55rem;
+}
+.espaco-facts li {
+  background: var(--paper-card); border: 1px solid var(--line); color: var(--ink);
+  padding: 0.45rem 0.95rem; border-radius: 999px; font-size: 0.9rem; font-weight: 600;
+}
 
 /* ---------- CONTATO ---------- */
 .section-contato {
@@ -394,6 +406,8 @@ h1, h2, h3, h4 {
 @media (min-width: 900px) {
   .hero-grid { grid-template-columns: 1.05fr 0.95fr; align-items: center; padding: 4.5rem 0 5rem; }
   .prof-grid { grid-template-columns: 0.9fr 1.1fr; gap: 3.2rem; }
+  .espaco-grid { grid-template-columns: 0.75fr 1.25fr; gap: 3.4rem; }
+  .espaco-video { justify-content: flex-start; }
   .stages { grid-template-columns: repeat(3, 1fr); }
   .contato-grid { grid-template-columns: 1fr 1fr; }
   .contato-map { min-height: 100%; }

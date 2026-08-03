@@ -286,29 +286,45 @@
       </div>
     </section>
 
-    <!-- ============ O ESPAÇO (fotos da clínica) ============ -->
+    <!-- ============ O ESPAÇO (vídeo vertical + texto) ============ -->
     <section class="section section-espaco" id="espaco" aria-labelledby="espaco-title">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">o espaço</p>
-          <h2 id="espaco-title">Um ambiente pensado para acolher</h2>
-          <p class="section-intro">
-            Salas tranquilas, luz suave e cantos preparados para cada idade — porque se sentir à
-            vontade também faz parte do cuidado. Veja um pouco do espaço da Afetto, em Palmas.
-          </p>
+      <div class="wrap espaco-grid">
+        <div class="espaco-video">
+          <!-- SUBSTITUIR: assets/video/clinica.mp4 (vídeo vertical do espaço, ~15s, em loop, sem áudio essencial) -->
+          <figure class="clinic-video">
+            <video autoplay muted loop playsinline preload="metadata"
+                   aria-label="Vídeo do espaço da clínica Afetto, em loop">
+              <source src="assets/video/clinica.mp4" type="video/mp4" />
+            </video>
+            <span class="photo-fallback" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><rect x="8" y="14" width="38" height="36" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M46 26l10-7v22l-10-7z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
+              <em>Vídeo da clínica</em>
+            </span>
+          </figure>
         </div>
 
-        <!-- SUBSTITUIR: assets/video/clinica.mp4 (vídeo real do espaço, horizontal, poucos segundos, sem áudio essencial) -->
-        <figure class="clinic-video">
-          <video autoplay muted loop playsinline preload="metadata"
-                 aria-label="Vídeo do espaço da clínica Afetto, em loop">
-            <source src="assets/video/clinica.mp4" type="video/mp4" />
-          </video>
-          <span class="photo-fallback" aria-hidden="true">
-            <svg viewBox="0 0 64 64"><rect x="8" y="14" width="38" height="36" rx="4" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M46 26l10-7v22l-10-7z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
-            <em>Vídeo da clínica</em>
-          </span>
-        </figure>
+        <div class="espaco-copy">
+          <p class="eyebrow">o espaço</p>
+          <h2 id="espaco-title">Um ambiente pensado para acolher</h2>
+          <p>
+            A sala de espera tem luz natural e um cantinho lúdico para as crianças
+            brincarem enquanto aguardam — nada de tempo parado olhando para o relógio.
+            As salas de atendimento são silenciosas e com poucos estímulos visuais,
+            pensadas também para quem se incomoda com barulho ou excesso de informação.
+          </p>
+          <p>
+            Cada fase da vida encontra o seu canto: cantinho lúdico para os pequenos,
+            poltronas confortáveis para adultos e idosos. Porque se sentir à vontade
+            também faz parte do cuidado — é o primeiro contato com a ideia que dá nome
+            à Afetto.
+          </p>
+          <ul class="espaco-facts" role="list">
+            <li>Luz natural</li>
+            <li>Salas silenciosas</li>
+            <li>Cantinho para crianças</li>
+            <li>Espaço para todas as idades</li>
+          </ul>
+        </div>
       </div>
     </section>
 
